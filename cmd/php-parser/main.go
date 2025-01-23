@@ -16,15 +16,15 @@ import (
 	"github.com/pkg/profile"
 	"github.com/yookoala/realpath"
 
-	"github.com/laytan/php-parser/pkg/ast"
-	"github.com/laytan/php-parser/pkg/conf"
-	"github.com/laytan/php-parser/pkg/errors"
-	"github.com/laytan/php-parser/pkg/parser"
-	"github.com/laytan/php-parser/pkg/version"
-	"github.com/laytan/php-parser/pkg/visitor/dumper"
-	"github.com/laytan/php-parser/pkg/visitor/nsresolver"
-	"github.com/laytan/php-parser/pkg/visitor/printer"
-	"github.com/laytan/php-parser/pkg/visitor/traverser"
+	"github.com/Demooon86/php-parser/pkg/ast"
+	"github.com/Demooon86/php-parser/pkg/conf"
+	"github.com/Demooon86/php-parser/pkg/errors"
+	"github.com/Demooon86/php-parser/pkg/parser"
+	"github.com/Demooon86/php-parser/pkg/version"
+	"github.com/Demooon86/php-parser/pkg/visitor/dumper"
+	"github.com/Demooon86/php-parser/pkg/visitor/nsresolver"
+	"github.com/Demooon86/php-parser/pkg/visitor/printer"
+	"github.com/Demooon86/php-parser/pkg/visitor/traverser"
 )
 
 var (

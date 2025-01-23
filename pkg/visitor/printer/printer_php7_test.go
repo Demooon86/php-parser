@@ -5,11 +5,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/laytan/php-parser/internal/php7"
-	"github.com/laytan/php-parser/pkg/ast"
-	"github.com/laytan/php-parser/pkg/conf"
-	"github.com/laytan/php-parser/pkg/version"
-	"github.com/laytan/php-parser/pkg/visitor/printer"
+	"github.com/Demooon86/php-parser/internal/php7"
+	"github.com/Demooon86/php-parser/pkg/ast"
+	"github.com/Demooon86/php-parser/pkg/conf"
+	"github.com/Demooon86/php-parser/pkg/version"
+	"github.com/Demooon86/php-parser/pkg/visitor/printer"
 )
 
 func ExamplePrinter() {
@@ -957,7 +957,7 @@ func TestParseAndPrintBreak(t *testing.T) {
 }
 
 func TestParseAndPrintClassMethod(t *testing.T) {
-    t.Skip("TODO: there should not be a blank line between the comment and method.")
+	t.Skip("TODO: there should not be a blank line between the comment and method.")
 	src := `<?php
 	class Foo {
 		/**

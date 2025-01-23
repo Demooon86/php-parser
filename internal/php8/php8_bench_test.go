@@ -5,9 +5,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/laytan/php-parser/internal/php8"
-	"github.com/laytan/php-parser/pkg/conf"
-	"github.com/laytan/php-parser/pkg/version"
+	"github.com/Demooon86/php-parser/internal/php8"
+	"github.com/Demooon86/php-parser/pkg/conf"
+	"github.com/Demooon86/php-parser/pkg/version"
 )
 
 func BenchmarkPhp8(b *testing.B) {

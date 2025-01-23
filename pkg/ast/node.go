@@ -1,8 +1,8 @@
 package ast
 
 import (
-	"github.com/laytan/php-parser/pkg/position"
-	"github.com/laytan/php-parser/pkg/token"
+	"github.com/Demooon86/php-parser/pkg/position"
+	"github.com/Demooon86/php-parser/pkg/token"
 )
 
 //go:generate go run node_funcs_gen.go

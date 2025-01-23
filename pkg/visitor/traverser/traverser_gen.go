@@ -1,4 +1,5 @@
 //go:build tools
+// +build tools
 
 package main
 
@@ -10,7 +11,7 @@ import (
 	"path/filepath"
 	"text/template"
 
-	phpast "github.com/laytan/php-parser/pkg/ast"
+	phpast "github.com/Demooon86/php-parser/pkg/ast"
 	"golang.org/x/tools/go/packages"
 )
 
@@ -32,7 +33,7 @@ var fileTempl = template.Must(
 
 package traverser
 
-import "github.com/laytan/php-parser/pkg/ast"
+import "github.com/Demooon86/php-parser/pkg/ast"
 {{range $typ := .Types}}
 func (t *Traverser) {{$typ.FuncName}}(n *ast.{{$typ.Name}}) {
     if !t.checkEntrance(n) {

@@ -11,8 +11,8 @@ import __yyfmt__ "fmt"
 import (
 	"strconv"
 
-	"github.com/laytan/php-parser/pkg/ast"
-	"github.com/laytan/php-parser/pkg/token"
+	"github.com/Demooon86/php-parser/pkg/ast"
+	"github.com/Demooon86/php-parser/pkg/token"
 )
 
 // line internal/php7/php7.y:13

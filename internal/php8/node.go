@@ -1,9 +1,9 @@
 package php8
 
 import (
-	"github.com/laytan/php-parser/pkg/ast"
-	"github.com/laytan/php-parser/pkg/position"
-	"github.com/laytan/php-parser/pkg/token"
+	"github.com/Demooon86/php-parser/pkg/ast"
+	"github.com/Demooon86/php-parser/pkg/position"
+	"github.com/Demooon86/php-parser/pkg/token"
 )
 
 type ParserBrackets struct {
@@ -22,7 +22,7 @@ func (n *ParserBrackets) GetPosition() *position.Position {
 }
 
 func (n *ParserBrackets) GetType() ast.Type {
-    return ast.TypeNone
+	return ast.TypeNone
 }
 
 type ParserSeparatedList struct {
@@ -40,7 +40,7 @@ func (n *ParserSeparatedList) GetPosition() *position.Position {
 }
 
 func (n *ParserSeparatedList) GetType() ast.Type {
-    return ast.TypeNone
+	return ast.TypeNone
 }
 
 // TraitAdaptationList node
@@ -60,7 +60,7 @@ func (n *TraitAdaptationList) GetPosition() *position.Position {
 }
 
 func (n *TraitAdaptationList) GetType() ast.Type {
-    return ast.TypeNone
+	return ast.TypeNone
 }
 
 // ArgumentList node
@@ -82,7 +82,7 @@ func (n *ArgumentList) GetPosition() *position.Position {
 }
 
 func (n *ArgumentList) GetType() ast.Type {
-    return ast.TypeNone
+	return ast.TypeNone
 }
 
 type EnumCaseExpr struct {
@@ -100,7 +100,7 @@ func (n *EnumCaseExpr) GetPosition() *position.Position {
 }
 
 func (n *EnumCaseExpr) GetType() ast.Type {
-    return ast.TypeNone
+	return ast.TypeNone
 }
 
 type ReturnType struct {
@@ -118,7 +118,7 @@ func (n *ReturnType) GetPosition() *position.Position {
 }
 
 func (n *ReturnType) GetType() ast.Type {
-    return ast.TypeNone
+	return ast.TypeNone
 }
 
 // TraitMethodRef node
@@ -138,5 +138,5 @@ func (n *TraitMethodRef) GetPosition() *position.Position {
 }
 
 func (n *TraitMethodRef) GetType() ast.Type {
-    return ast.TypeNone
+	return ast.TypeNone
 }

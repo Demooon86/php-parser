@@ -5,8 +5,8 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/laytan/php-parser/pkg/ast"
-	"github.com/laytan/php-parser/pkg/visitor"
+	"github.com/Demooon86/php-parser/pkg/ast"
+	"github.com/Demooon86/php-parser/pkg/visitor"
 )
 
 // NamespaceResolver visitor

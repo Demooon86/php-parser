@@ -1,8 +1,8 @@
 package conf
 
 import (
-	"github.com/laytan/php-parser/pkg/errors"
-	"github.com/laytan/php-parser/pkg/version"
+	"github.com/Demooon86/php-parser/pkg/errors"
+	"github.com/Demooon86/php-parser/pkg/version"
 )
 
 type Config struct {

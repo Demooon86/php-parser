@@ -3,11 +3,11 @@ package tester
 import (
 	"testing"
 
-	"github.com/laytan/php-parser/internal/php7"
-	"github.com/laytan/php-parser/internal/php8"
-	"github.com/laytan/php-parser/pkg/conf"
-	"github.com/laytan/php-parser/pkg/token"
-	"github.com/laytan/php-parser/pkg/version"
+	"github.com/Demooon86/php-parser/internal/php7"
+	"github.com/Demooon86/php-parser/internal/php8"
+	"github.com/Demooon86/php-parser/pkg/conf"
+	"github.com/Demooon86/php-parser/pkg/token"
+	"github.com/Demooon86/php-parser/pkg/version"
 	"gotest.tools/assert"
 )
 

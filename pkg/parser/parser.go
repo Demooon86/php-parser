@@ -3,11 +3,11 @@ package parser
 import (
 	"errors"
 
-	"github.com/laytan/php-parser/internal/php7"
-	"github.com/laytan/php-parser/internal/php8"
-	"github.com/laytan/php-parser/pkg/ast"
-	"github.com/laytan/php-parser/pkg/conf"
-	"github.com/laytan/php-parser/pkg/version"
+	"github.com/Demooon86/php-parser/internal/php7"
+	"github.com/Demooon86/php-parser/internal/php8"
+	"github.com/Demooon86/php-parser/pkg/ast"
+	"github.com/Demooon86/php-parser/pkg/conf"
+	"github.com/Demooon86/php-parser/pkg/version"
 )
 
 // ErrVersionOutOfRange is returned if the version is not supported

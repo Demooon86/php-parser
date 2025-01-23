@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/laytan/php-parser/pkg/conf"
-	"github.com/laytan/php-parser/pkg/parser"
-	"github.com/laytan/php-parser/pkg/version"
-	"github.com/laytan/php-parser/pkg/visitor/dumper"
+	"github.com/Demooon86/php-parser/pkg/conf"
+	"github.com/Demooon86/php-parser/pkg/parser"
+	"github.com/Demooon86/php-parser/pkg/version"
+	"github.com/Demooon86/php-parser/pkg/visitor/dumper"
 	"gotest.tools/assert"
 )
 

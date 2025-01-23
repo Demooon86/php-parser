@@ -9,7 +9,7 @@ import (
 	"regexp"
 	"text/template"
 
-	"github.com/laytan/php-parser/pkg/ast"
+	"github.com/Demooon86/php-parser/pkg/ast"
 )
 
 type templData struct {
@@ -27,7 +27,7 @@ var fileTempl = template.Must(
 
 package ast
 
-import "github.com/laytan/php-parser/pkg/position"
+import "github.com/Demooon86/php-parser/pkg/position"
 
 type Type int
 

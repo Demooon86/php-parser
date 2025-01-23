@@ -5,7 +5,7 @@ import (
 
 	"gotest.tools/assert"
 
-	"github.com/laytan/php-parser/pkg/version"
+	"github.com/Demooon86/php-parser/pkg/version"
 )
 
 func Test(t *testing.T) {

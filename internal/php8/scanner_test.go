@@ -5,11 +5,11 @@ import (
 
 	"gotest.tools/assert"
 
-	"github.com/laytan/php-parser/pkg/conf"
-	"github.com/laytan/php-parser/pkg/errors"
-	"github.com/laytan/php-parser/pkg/position"
-	"github.com/laytan/php-parser/pkg/token"
-	"github.com/laytan/php-parser/pkg/version"
+	"github.com/Demooon86/php-parser/pkg/conf"
+	"github.com/Demooon86/php-parser/pkg/errors"
+	"github.com/Demooon86/php-parser/pkg/position"
+	"github.com/Demooon86/php-parser/pkg/token"
+	"github.com/Demooon86/php-parser/pkg/version"
 )
 
 func TestTokens(t *testing.T) {
