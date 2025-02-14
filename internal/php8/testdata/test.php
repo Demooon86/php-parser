@@ -68,6 +68,7 @@ while (1) { break; }
 while (1) { break 2; }
 while (1) : break(3); endwhile;
 class foo{ public const FOO = 1, BAR = 2; }
+class foo{ public const int FOO = 1, BAR = 2; }
 class foo{ const FOO = 1, BAR = 2; }
 class foo{ function bar() {} }
 class foo{ public static function &bar() {} }

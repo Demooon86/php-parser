@@ -1,7 +1,7 @@
 package php8_test
 
 import (
-	"io/ioutil"
+	"os"
 	"path/filepath"
 	"testing"
 
@@ -11,7 +11,7 @@ import (
 )
 
 func BenchmarkPhp8(b *testing.B) {
-	src, err := ioutil.ReadFile(filepath.Join("testdata", "test.php"))
+	src, err := os.ReadFile(filepath.Join("testdata", "test.php"))
 	if err != nil {
 		b.Fatal("can not read testdata/test.php: " + err.Error())
 	}
