@@ -32,7 +32,7 @@ func TestReadonlyTokens(t *testing.T) {
 	suite.Run()
 }
 
-func TestNumberTokens(t *testing.T) {
+func TestNumberTokens8(t *testing.T) {
 	suite := tester.NewLexerTokenStructTestSuite(t)
 	suite.UsePHP8()
 	suite.Code = `<?php

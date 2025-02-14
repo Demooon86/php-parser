@@ -1359,6 +1359,36 @@ func (b *Builder) NewPropertyList(
 	}
 }
 
+func (b *Builder) NewClassTypedConstList(
+	AttrGroups []ast.Vertex,
+	Modifiers []ast.Vertex,
+	ConstTkn *token.Token,
+	Type ast.Vertex,
+	ConstList ast.Vertex,
+	SemiColonTkn *token.Token,
+) *ast.StmtClassConstList {
+	consts, sepTkns := b.SeparatedListItems(ConstList)
+
+	var pos *position2.Position
+
+	if AttrGroups != nil {
+		pos = b.Pos.NewNodeListTokenPosition(AttrGroups, SemiColonTkn)
+	} else {
+		pos = b.Pos.NewOptionalListTokensPosition(Modifiers, ConstTkn, SemiColonTkn)
+	}
+
+	return &ast.StmtClassConstList{
+		Position:      pos,
+		AttrGroups:    AttrGroups,
+		Modifiers:     Modifiers,
+		ConstTkn:      ConstTkn,
+		Consts:        consts,
+		ConstType:     Type,
+		SeparatorTkns: sepTkns,
+		SemiColonTkn:  SemiColonTkn,
+	}
+}
+
 func (b *Builder) NewClassConstList(
 	AttrGroups []ast.Vertex,
 	Modifiers []ast.Vertex,
@@ -1382,6 +1412,7 @@ func (b *Builder) NewClassConstList(
 		Modifiers:     Modifiers,
 		ConstTkn:      ConstTkn,
 		Consts:        consts,
+		ConstType:     nil,
 		SeparatorTkns: sepTkns,
 		SemiColonTkn:  SemiColonTkn,
 	}

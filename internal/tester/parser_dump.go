@@ -2,13 +2,13 @@ package tester
 
 import (
 	"bytes"
+	"gotest.tools/assert"
 	"testing"
 
 	"github.com/Demooon86/php-parser/pkg/conf"
 	"github.com/Demooon86/php-parser/pkg/parser"
 	"github.com/Demooon86/php-parser/pkg/version"
 	"github.com/Demooon86/php-parser/pkg/visitor/dumper"
-	"gotest.tools/assert"
 )
 
 type ParserDumpTestSuite struct {
@@ -46,6 +46,9 @@ func (p *ParserDumpTestSuite) WithPositions() {
 
 func (p *ParserDumpTestSuite) UsePHP8() {
 	p.Version = version.Version{Major: 8, Minor: 0}
+}
+func (p *ParserDumpTestSuite) UsePHP83() {
+	p.Version = version.Version{Major: 8, Minor: 3}
 }
 
 func (p *ParserDumpTestSuite) Run() {

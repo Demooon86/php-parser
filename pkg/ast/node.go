@@ -240,6 +240,7 @@ type StmtClassConstList struct {
 	AttrGroups    []Vertex
 	Modifiers     []Vertex
 	ConstTkn      *token.Token
+	ConstType     Vertex
 	Consts        []Vertex
 	SeparatorTkns []*token.Token
 	SemiColonTkn  *token.Token

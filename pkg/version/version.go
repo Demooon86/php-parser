@@ -21,7 +21,7 @@ var (
 	php7RangeEnd   = &Version{Major: 7, Minor: 4}
 
 	php8RangeStart = &Version{Major: 8}
-	php8RangeEnd   = &Version{Major: 8, Minor: 2}
+	php8RangeEnd   = &Version{Major: 8, Minor: 3}
 )
 
 func New(v string) (*Version, error) {
@@ -82,11 +82,11 @@ func (v *Version) InRange(s, e *Version) bool {
 }
 
 func (v *Version) InPhp7Range() bool {
-    return v.InRange(php7RangeStart, php7RangeEnd)
+	return v.InRange(php7RangeStart, php7RangeEnd)
 }
 
 func (v *Version) InPhp8Range() bool {
-    return v.InRange(php8RangeStart, php8RangeEnd)
+	return v.InRange(php8RangeStart, php8RangeEnd)
 }
 
 // Compare compares this version to another one. It returns -1, 0, or 1 if

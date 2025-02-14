@@ -1,6 +1,7 @@
-package php8
+package php8_test
 
 import (
+	"github.com/Demooon86/php-parser/internal/php8"
 	"testing"
 
 	"gotest.tools/assert"
@@ -358,7 +359,7 @@ func TestTokens(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 
 	for {
@@ -391,7 +392,7 @@ func TestShebang(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 
 	tkn := lexer.Lex()
@@ -416,7 +417,7 @@ func TestShebangHtml(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	tkn := lexer.Lex()
 	assert.Equal(t, tkn.ID, token.T_INLINE_HTML)
@@ -471,7 +472,7 @@ func TestNumberTokens(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 
 	for {
@@ -533,7 +534,7 @@ func TestConstantStrings(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 
 	for {
@@ -585,7 +586,7 @@ func TestSingleQuoteStringTokens(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 
 	for {
@@ -685,7 +686,7 @@ func TestTeplateStringTokens(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 
 	for {
@@ -781,7 +782,7 @@ func TestBackquoteStringTokens(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 
 	for {
@@ -880,7 +881,7 @@ CAT;
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 
 	for {
@@ -958,7 +959,7 @@ CAT
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 
 	for {
@@ -1002,7 +1003,7 @@ CAT;
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 
 	for {
@@ -1038,7 +1039,7 @@ func TestHereDocTokens73(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 
 	for {
@@ -1073,7 +1074,7 @@ CAT;`
 			Minor: 2,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 
 	for {
@@ -1101,7 +1102,7 @@ func TestHereDocUnclosed(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 
 	for {
@@ -1138,7 +1139,7 @@ func TestInlineHtmlNopTokens(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 
 	for {
@@ -1178,7 +1179,7 @@ func TestStringTokensAfterVariable(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 	actualTokens := []string{}
 
@@ -1217,7 +1218,7 @@ func TestSlashAfterVariable(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 	actual := []string{}
 	actualTokens := []string{}
 
@@ -1260,7 +1261,7 @@ func TestCommentEnd(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	tkn := lexer.Lex()
 
@@ -1297,7 +1298,7 @@ func TestCommentNewLine(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	tkn := lexer.Lex()
 
@@ -1334,7 +1335,7 @@ func TestCommentNewLine1(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	tkn := lexer.Lex()
 
@@ -1371,7 +1372,7 @@ func TestCommentNewLine2(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	tkn := lexer.Lex()
 
@@ -1409,7 +1410,7 @@ func TestCommentWithPhpEndTag(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	tkn := lexer.Lex()
 
@@ -1447,7 +1448,7 @@ func TestInlineComment(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	tkn := lexer.Lex()
 
@@ -1485,7 +1486,7 @@ func TestInlineComment2(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	tkn := lexer.Lex()
 
@@ -1527,7 +1528,7 @@ func TestEmptyInlineComment(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	tkn := lexer.Lex()
 
@@ -1565,7 +1566,7 @@ func TestEmptyInlineComment2(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	tkn := lexer.Lex()
 
@@ -1587,7 +1588,7 @@ func TestMethodCallTokens(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	expected := []*token.Token{
 		{
@@ -1695,7 +1696,7 @@ func TestYieldFromTokens(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	expected := []*token.Token{
 		{
@@ -1737,7 +1738,7 @@ func TestVarNameByteChars(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	tkn := lexer.Lex()
 	assert.Equal(t, "$\x80", string(tkn.Value))
@@ -1755,7 +1756,7 @@ func TestStringVarNameByteChars(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	tkn := lexer.Lex()
 	assert.Equal(t, "\"", string(tkn.Value))
@@ -1786,7 +1787,7 @@ func TestIgnoreControllCharacters(t *testing.T) {
 			actualErr = e
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	expected := "echo"
 	tkn := lexer.Lex()
@@ -1814,7 +1815,7 @@ func TestIgnoreControllCharactersAtStringVarOffset(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	expected := "\""
 	tkn := lexer.Lex()
@@ -1851,7 +1852,7 @@ func TestDoubleDollar(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	expected := "\""
 	tkn := lexer.Lex()
@@ -1878,7 +1879,7 @@ func TestTripleDollar(t *testing.T) {
 			Minor: 4,
 		},
 	}
-	lexer := NewLexer([]byte(src), config)
+	lexer := php8.NewLexer([]byte(src), config)
 
 	expected := "\""
 	tkn := lexer.Lex()
